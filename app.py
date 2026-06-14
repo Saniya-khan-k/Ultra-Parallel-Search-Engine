@@ -12,67 +12,98 @@ st.set_page_config(
     initial_sidebar_state="expanded"
 )
 
-# 2. Custom CSS injection for Premium Look & Feel (Global Contrast & Spacing Fix)
+# 2. Custom CSS injection for High-Contrast Premium Visibility (Perfect Fixed Theme)
 st.markdown("""
     <style>
-    /* Main Background & Base Font Override */
+    /* Main Dark Dashboard Base Setup */
     .stApp {
-        background-color: #0F172A;
-        color: #F8FAFC !important;
+        background-color: #0F172A !important;
+        color: #FFFFFF !important;
     }
-    /* Fixing the top header padding so title doesn't cut off */
+    
+    /* Fixing top layout spacing */
     .main .block-container {
         padding-top: 5rem !important;
     }
-    /* Force ALL text, labels, headers, and markdown inside main body to be bright white */
-    .stApp p, .stApp span, .stApp h1, .stApp h2, .stApp h3, .stApp h4, .stApp li {
-        color: #F8FAFC !important;
+
+    /* FORCE ALL TEXT ELEMENTS TO BE CRISP PROMINENT WHITE */
+    h1, h2, h3, h4, h5, h6, p, span, label, li {
+        color: #FFFFFF !important;
+        font-family: 'Inter', sans-serif !important;
     }
-    div[data-testid="stMarkdownContainer"] p, div[data-testid="stMarkdownContainer"] label {
-        color: #F8FAFC !important;
-    }
-    /* Specific styling for the input text box label */
-    .stTextInput label p {
-        color: #F8FAFC !important;
-        font-weight: 600 !important;
-        font-size: 1.1rem !important;
-    }
-    /* Sidebar styling with bright text visibility */
+
+    /* Sidebar Clean Glassmorphic Container */
     section[data-testid="stSidebar"] {
         background-color: #1E293B !important;
+        border-right: 1px solid #334155 !important;
     }
     section[data-testid="stSidebar"] label, section[data-testid="stSidebar"] p, section[data-testid="stSidebar"] span {
-        color: #F8FAFC !important;
-        font-weight: 500;
+        color: #FFFFFF !important;
+        font-size: 14px !important;
+        font-weight: 600 !important;
     }
-    /* Input field text control */
-    div[data-baseweb="input"] input {
-        color: #0F172A !important; 
-        background-color: #FFFFFF !important;
-    }
-    /* Premium Metric/Card Containers */
+
+    /* Premium Metric Blocks Styling */
     .premium-card {
-        background-color: #1E293B;
-        padding: 24px;
-        border-radius: 12px;
-        border: 1px solid #334155;
-        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        background-color: #1E293B !important;
+        padding: 22px;
+        border-radius: 10px;
+        border: 1px solid #475569;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
         margin-bottom: 20px;
     }
     .metric-val {
-        font-size: 2rem;
-        font-weight: 700;
+        font-size: 2.2rem;
+        font-weight: 800;
         color: #38BDF8 !important;
+        margin-top: 5px;
     }
     .metric-label {
-        font-size: 0.875rem;
+        font-size: 0.9rem;
         color: #94A3B8 !important;
         text-transform: uppercase;
         letter-spacing: 0.05em;
+        font-weight: 700;
     }
-    /* Status Badges */
-    .badge-py { background-color: #0284C7; color: white !important; padding: 4px 8px; border-radius: 4px; font-size: 12px; }
-    .badge-doc { background-color: #059669; color: white !important; padding: 4px 8px; border-radius: 4px; font-size: 12px; }
+
+    /* Super Clean Input Text Area Correction */
+    .stTextInput label p {
+        color: #FFFFFF !important;
+        font-weight: 700 !important;
+        font-size: 1.15rem !important;
+        margin-bottom: 8px;
+    }
+    div[data-baseweb="input"] {
+        background-color: #FFFFFF !important;
+        border: 2px solid #38BDF8 !important;
+        border-radius: 6px !important;
+    }
+    div[data-baseweb="input"] input {
+        color: #0F172A !important; 
+        background-color: #FFFFFF !important;
+        font-size: 16px !important;
+        font-weight: 600 !important;
+    }
+
+    /* Execution Action Button Styling */
+    div.stButton > button {
+        background-color: #38BDF8 !important;
+        color: #0F172A !important;
+        font-weight: 700 !important;
+        font-size: 16px !important;
+        border-radius: 6px !important;
+        border: none !important;
+        padding: 10px 20px !important;
+        transition: all 0.3s ease;
+    }
+    div.stButton > button:hover {
+        background-color: #0EA5E9 !important;
+        box-shadow: 0 0 15px rgba(56, 189, 248, 0.4) !important;
+    }
+
+    /* Result Badges */
+    .badge-py { background-color: #0284C7; color: #FFFFFF !important; padding: 4px 10px; border-radius: 4px; font-weight: 700; font-size: 11px; }
+    .badge-doc { background-color: #059669; color: #FFFFFF !important; padding: 4px 10px; border-radius: 4px; font-weight: 700; font-size: 11px; }
     </style>
 """, unsafe_allow_html=True)
 
@@ -114,7 +145,7 @@ search_query = st.text_input("🔍 Enter Target Query / Keyword String:", placeh
 col1, col2 = st.columns(2)
 
 with col1:
-    # Action Controller Button Trigger (Ensures everything executes safely post-click)
+    # Action Controller Button Trigger 
     if st.button("🚀 Execute Concurrent Search Execution", use_container_width=True):
         if not search_query:
             st.warning("Please type a search query first.")
@@ -175,7 +206,7 @@ with col2:
     # Right column informational Card/Graph Area
     st.markdown('<div class="premium-card"><h4>📈 Benchmark Node</h4><p style="font-size:13px; color:#94A3B8;">Real-time resource utilization breakdown matrix across execution cycles.</p></div>', unsafe_allow_html=True)
     
-    # Matplotlib visualization container placeholder (Safely matches runtime button triggers)
+    # Matplotlib visualization container placeholder 
     fig, ax = plt.subplots(figsize=(5, 4))
     fig.patch.set_facecolor('#1E293B')
     ax.set_facecolor('#0F172A')
