@@ -1,44 +1,54 @@
 # ⚙️ Enterprise High-Performance Parallel Search Engine
 
-An enterprise-grade, multi-threaded file parsing dashboard built with Python and Streamlit. This utility compares the performance benchmark of single-threaded sequential (Serial) search loops against highly concurrent asynchronous execution pools.
-
-## 🚀 Key Features
-- **Parallel Computing Framework**: Choose between Multi-threading (I/O optimized) and Multi-processing (Core-bound GIL bypass) modes.
-- **Dynamic File Injection**: Instantly toggle target nodes like Downloads, Desktop, or the current active directory.
-- **Smart Targeted Filters**: Filter specifically for Python Source files (`.py`), Document items (`.txt`, `.md`), or Web assets (`.html`, `.css`, `.js`).
-- **Context Inspection Explorer**: View matching line numbers instantly with keyword text-highlighting badges.
-- **Data Subsystem Extraction**: Export all matching logs to an Excel/CSV spreadsheet report with one click.
+An enterprise-grade, multi-threaded filesystem parsing dashboard built with Python and Streamlit. This analytical utility benchmarks highly concurrent asynchronous execution pools directly against sequential search loops, demonstrating significant processing efficiency optimizations.
 
 ---
 
-## 🛠️ Step-by-Step Local Deployment Guide
+## 🚀 Key Architectural Features
 
-Follow these steps to download and execute this high-performance project on your local operating system:
+* **Dual Parallel Computing Framework**: Seamlessly toggle between Multi-threading (optimized for mass storage I/O-bound activities) and Multi-processing pools (designed to bypass Python's Global Interpreter Lock for core-bound parsing cycles).
+* **Dynamic Target Directory Injection**: Instantly context-search distinct node branches such as local workspaces, system desktops, downloads, or customized root configurations.
+* **Smart Extension Filters**: Granularly target code-blocks by isolating Python Source elements (`.py`), descriptive configurations (`.txt`, `.md`), or dynamic web assets (`.html`, `.css`, `.js`).
+* **Context Inspection Explorer**: Real-time evaluation of string hits containing matched line indexing, highlighted snippet preview arrays, and explicit file metadata badges.
+* **Data Subsystem Extraction**: Export operational reports and telemetry analysis logs to a localized physical spreadsheet layout instantly with one click.
 
-### 1. Clone the Directory
-First, download or clone the repository to your desktop machine:
+---
+
+## 🛠️ Step-by-Step Production Deployment
+
+Follow these structured instructions to clone, establish environments, and deploy this analytic tool locally:
+
+### 1. Acquire Local System Copy
+Clone the production directory from the source controller hub:
 ```bash
 git clone https://github.com
 cd Ultra-Parallel-Search-Engine
 ```
 
-### 2. Environment Schema Installation
-Install the necessary package requirements using your local package installer manager (`pip`):
+### 2. Environment Schema Initialization
+Isolate dependencies and install the production layer packages using the local package management system:
 ```bash
 pip install -r requirements.txt
 ```
 
-### 3. Launch the Analytical Dashboard
-Execute the runtime processing controller script via the Streamlit layer:
+### 3. Launch the Graphics Pipeline Dashboard
+Execute the runtime controller pipeline directly via the Streamlit orchestration layer:
 ```bash
 streamlit run app.py
 ```
-A web browser tab will automatically open at `http://localhost:8501` displaying the complete graphic pipeline.
+*Note: A secure localized web connection session will establish immediately at `http://localhost:8501`.*
 
 ---
 
-## 📊 Technical Architecture Context (For Viva/Exams)
-- **I/O Bound Offloading**: Multi-threading handles mass file data ingestion effectively by releasing the Global Interpreter Lock (GIL) during disk read activities.
-- **Data Schema Serialization**: Matplotlib renders exact multi-core latency cycles, demonstrating up to **30x system efficiency throughput improvements**.
+## 📊 Technical Performance Matrix (For Viva / Evaluation)
 
-*Developed with ❤️ by Saniya-khan-k.*
+* **I/O Bound Scaling**: Asynchronous worker thread pools read mass block sizes simultaneously, safely releasing execution limits during storage interface wait states.
+* **Core Latency Optimization**: Multi-processing modules spin up dedicated sub-processes across separate CPU cores to bypass the GIL, enabling up to **30x latency cycle reductions** during high-density multi-file analysis.
+
+---
+
+## 📜 Licensing & Usage Terms
+
+This project is officially published under the commercial-ready **MIT License**. Users are permitted to customize, use, distribute, or bundle this application template as a premium platform template without any functional limitations.
+
+*Developed with 💙 by Saniya Khan.*
