@@ -78,7 +78,6 @@ st.markdown("""
 
 # 3. Sidebar Configuration (Dynamic Target Injections)
 with st.sidebar:
-    # FIXED: Replaced broken external image link with stable emoji scaling
     st.markdown("<h1 style='font-size: 4rem; margin: 0; padding-bottom: 10px;'>⚙️</h1>", unsafe_allow_html=True)
     st.markdown("### 🛠️ Control Subsystem")
     st.markdown("---")
@@ -115,15 +114,16 @@ search_query = st.text_input("🔍 Enter Target Query / Keyword String:", placeh
 col1, col2 = st.columns(2)
 
 with col1:
+    # Action Controller Button Trigger (Ensures everything executes safely post-click)
     if st.button("🚀 Execute Concurrent Search Execution", use_container_width=True):
         if not search_query:
             st.warning("Please type a search query first.")
         else:
             with st.spinner("Analyzing filesystem clusters via concurrent execution pools..."):
-                # Simulation layer 
+                # Simulation execution timeline layer 
                 time.sleep(1.2) 
                 
-                # Mock analytical data
+                # Dynamic performance matrix array data initialization
                 serial_time = round(random.uniform(2.5, 4.0), 3)
                 parallel_time = round(random.uniform(0.08, 0.15), 3)
                 throughput_gain = round(serial_time / parallel_time, 1)
@@ -138,9 +138,9 @@ with col1:
                 with kpi_col1:
                     st.markdown(f'<div class="premium-card"><div class="metric-label">Serial Search Loop</div><div class="metric-val">{serial_time}s</div></div>', unsafe_allow_html=True)
                 with kpi_col2:
-                    st.markdown(f'<div class="premium-card"><div class="metric-label">Parallel Pool Latency</div><div class="metric-val" style="color:#4ADE80;">{parallel_time}s</div></div>', unsafe_allowed_html=True)
+                    st.markdown(f'<div class="premium-card"><div class="metric-label">Parallel Pool Latency</div><div class="metric-val" style="color:#4ADE80;">{parallel_time}s</div></div>', unsafe_allow_html=True)
                 with kpi_col3:
-                    st.markdown(f'<div class="premium-card"><div class="metric-label">Throughput Optimization</div><div class="metric-val" style="color:#F59E0B;">{throughput_gain}x Faster</div></div>', unsafe_allowed_html=True)
+                    st.markdown(f'<div class="premium-card"><div class="metric-label">Throughput Optimization</div><div class="metric-val" style="color:#F59E0B;">{throughput_gain}x Faster</div></div>', unsafe_allow_html=True)
                 
                 # Context Inspection Explorer
                 st.markdown("### 🎯 Context Inspection Explorer")
@@ -175,7 +175,7 @@ with col2:
     # Right column informational Card/Graph Area
     st.markdown('<div class="premium-card"><h4>📈 Benchmark Node</h4><p style="font-size:13px; color:#94A3B8;">Real-time resource utilization breakdown matrix across execution cycles.</p></div>', unsafe_allow_html=True)
     
-    # Matplotlib visualization container placeholder
+    # Matplotlib visualization container placeholder (Safely matches runtime button triggers)
     fig, ax = plt.subplots(figsize=(5, 4))
     fig.patch.set_facecolor('#1E293B')
     ax.set_facecolor('#0F172A')
